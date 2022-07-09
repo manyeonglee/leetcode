@@ -5,9 +5,9 @@ public class Solution {
         int length = 0, start = 0;
         for(int i=0; i<s.Length; i++)
         {
-            int currentLength = PalindromeLength(s, i, i+1);
+            int evenLength = PalindromeLength(s, i, i+1);
             int oddLength = PalindromeLength(s, i, i);
-            currentLength = Math.Max(currentLength, oddLength);
+            int currentLength = Math.Max(evenLength, oddLength);
             
             if(currentLength>length)
             {
